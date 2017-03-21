@@ -31,29 +31,14 @@ style:this.getInitialStyle().borderedBtn};
 return(0,_computeProps2.default)(this.props,defaultProps);
 }},{key:'render',value:function render()
 {var _this2=this;
-if(_reactNative.Platform.OS==='ios'||_platform2.default.androidRipple===false||_reactNative.Platform['Version']<=21){
-return(
-_react2.default.createElement(_reactNative.TouchableOpacity,_extends({},
+return _react2.default.createElement(_reactNative.TouchableOpacity,_extends({},
 this.prepareRootProps(),{
 ref:function ref(c){return _this2._root=c;},
 activeOpacity:this.props.activeOpacity?this.props.activeOpacity:0.5}),
 
-this.props.children));
+this.props.children);
 
 
-}else
-{
-return(
-_react2.default.createElement(_reactNative.TouchableNativeFeedback,_extends({ref:function ref(c){return _this2._root=c;},
-onPress:this.props.onPress,
-background:this.props.androidRippleColor?_reactNative.TouchableNativeFeedback.Ripple(this.props.androidRippleColor):_reactNative.TouchableNativeFeedback.Ripple(_platform2.default.androidRippleColor)},
-this.prepareRootProps()),
-_react2.default.createElement(_reactNative.View,this.prepareRootProps(),
-this.props.children)));
-
-
-
-}
 }}]);return Button;}(_react.Component);
 
 

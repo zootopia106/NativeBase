@@ -1,6 +1,7 @@
 'use_strict';
 var _lodash=require('lodash');var _lodash2=_interopRequireDefault(_lodash);
-var _ReactNativePropRegistry=require('react-native/Libraries/Renderer/src/renderers/native/ReactNativePropRegistry');var _ReactNativePropRegistry2=_interopRequireDefault(_ReactNativePropRegistry);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
+var _reactNative=require('react-native');function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
+
 
 
 module.exports=function(incomingProps,defaultProps){
@@ -24,13 +25,13 @@ computedProps.style={};
 if(Array.isArray(incomingPropsStyle)){
 _lodash2.default.forEach(incomingPropsStyle,function(style){
 if(typeof style==='number'){
-_lodash2.default.merge(computedPropsStyle,_ReactNativePropRegistry2.default.getByID(style));
+_lodash2.default.merge(computedPropsStyle,_reactNative.StyleSheet.flatten(style));
 }else{
 _lodash2.default.merge(computedPropsStyle,style);
 }
 });
 }else if(typeof incomingPropsStyle==='number'){
-computedPropsStyle=_ReactNativePropRegistry2.default.getByID(incomingPropsStyle);
+computedPropsStyle=_reactNative.StyleSheet.flatten(incomingPropsStyle);
 }else{
 computedPropsStyle=incomingPropsStyle;
 }

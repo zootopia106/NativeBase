@@ -1,7 +1,7 @@
 /* @flow */
 
 import React, { Component } from 'react';
-import { Picker, Modal, View, ListView } from 'react-native';
+import { Picker, View, ListView } from 'react-native';
 import _ from 'lodash';
 import { Text } from './Text';
 import { List } from './List';
@@ -119,16 +119,15 @@ class PickerNB extends Component {
     </Header>);
   }
 
+
   render() {
+
+    var el = this;
+
     return (
       <View ref={c => this._root = c}>
         {this.renderButton()}
-        <Modal
-          animationType="slide"
-          transparent={false}
-          visible={this.state.modalVisible}
-          onRequestClose={() => { this._setModalVisible(false); }}
-        >
+        {(this.state.modalVisible) && <Modal>
           <Container>
             {this.renderHeader()}
             <Content>
@@ -157,11 +156,36 @@ class PickerNB extends Component {
               />
             </Content>
           </Container>
-        </Modal>
+        </Modal>}
       </View>
     );
   }
 
+}
+
+
+class Modal extends React.Component {
+
+  componentDidMount() {
+    document.body.appendChild(this.el);
+  }
+  componentWillUnmount() {
+    document.body.removeChild(this.el);
+  }
+
+  render() {
+    return <div
+      ref={ (el) => this.el = el }
+      style={{
+        borderWidth: 1,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        top: 0,
+        zIndex: 999
+      }}
+    >{this.props.children}</div>;
+  }
 }
 
 PickerNB.Item = React.createClass({

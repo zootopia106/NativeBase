@@ -14,12 +14,13 @@ class Header extends Component {
   render() {
     const variables = (this.context.theme) ? this.context.theme['@@shoutem.theme/themeStyle'].variables : variable;
     const platformStyle = variables.platformStyle;
+    const platform = variables.platform;
 
     return (
       <View>
-        <StatusBar
+      {(platform!=='web') && <StatusBar
           backgroundColor={(this.props.androidStatusBarColor) ? this.props.androidStatusBarColor : variables.statusBarColor}
-          barStyle={(this.props.iosBarStyle) ? this.props.iosBarStyle : (platformStyle === 'material') ? 'light-content' : variables.iosStatusbar } />
+          barStyle={(this.props.iosBarStyle) ? this.props.iosBarStyle : (platformStyle === 'material') ? 'light-content' : variables.iosStatusbar } />}
           <View ref={c => this._root = c} {...this.props} />
       </View>
     );

@@ -115,16 +115,16 @@ export default (variables = variable) => {
             fontWeight: '500',
           },
           paddingHorizontal: null,
-          paddingLeft: (platform === 'ios') ? 10 : null,
+          paddingLeft: (platformStyle === 'ios') ? 10 : null,
         },
-        paddingHorizontal: (platform === 'ios') ? undefined : null,
-        width: (platform === 'ios') ? undefined : 0,
-        height: (platform === 'ios') ? undefined : 0,
+        paddingHorizontal: (platformStyle === 'ios') ? undefined : null,
+        width: (platformStyle === 'ios') ? undefined : 0,
+        height: (platformStyle === 'ios') ? undefined : 0,
       },
     },
     '.rounded': {
       'NativeBase.Item': {
-        borderRadius: ((platform === 'ios') && (platformStyle!=='material')) ? 25 : 3,
+        borderRadius: ((platformStyle === 'ios') && (platformStyle!=='material')) ? 25 : 3,
       },
     },
     'NativeBase.Left': {
@@ -191,13 +191,13 @@ export default (variables = variable) => {
         alignSelf: null,
         paddingHorizontal: variables.buttonPadding,
       },
-      flex: ((platform === 'ios') && (platformStyle!=='material')) ? 1 : 0.5,
+      flex: ((platformStyle === 'ios') && (platformStyle!=='material')) ? 1 : 0.5,
       alignSelf: 'center',
       alignItems: 'flex-start',
     },
     'NativeBase.Body': {
       flex: 1,
-      alignItems: ((platform === 'ios') && (platformStyle!=='material')) ? 'center' : 'flex-start',
+      alignItems: ((platformStyle === 'ios') && (platformStyle!=='material')) ? 'center' : 'flex-start',
       alignSelf: 'center',
       'NativeBase.Segment': {
         borderWidth: 0,

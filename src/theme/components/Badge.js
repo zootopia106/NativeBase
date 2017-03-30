@@ -4,6 +4,9 @@ import _ from 'lodash';
 import variable from './../variables/platform';
 
 export default (variables = variable) => {
+  const platformStyle = variables.platformStyle;
+  const platform = variables.platform;
+
   const badgeTheme = {
       '.primary': {
         backgroundColor: variables.btnPrimaryBg,
@@ -23,7 +26,7 @@ export default (variables = variable) => {
       'NativeBase.Text': {
         color: variables.badgeColor,
         fontSize: variables.fontSizeBase,
-        lineHeight: variables.lineHeight - 1,
+        lineHeight: (platform === 'web') ? 28 : variables.lineHeight - 1,
         textAlign: 'center',
         paddingHorizontal: 3,
       },

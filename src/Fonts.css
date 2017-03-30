@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../Fonts/Roboto.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+* {
+  font-family: 'Roboto-Regular';
+}

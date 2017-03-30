@@ -132,6 +132,7 @@ class PickerNB extends Component {
             {this.renderHeader()}
             <Content>
               <ListView
+                contentContainerStyle={{backgroundColor: '#fff'}}
                 dataSource={this.state.dataSource}
                 renderRow={child =>
                   <ListItem
@@ -167,15 +168,28 @@ class PickerNB extends Component {
 class Modal extends React.Component {
 
   componentDidMount() {
-    document.body.appendChild(this.el);
+    document.body.appendChild(this.child);
   }
   componentWillUnmount() {
-    document.body.removeChild(this.el);
+    // this.parent.appendChild(this.child);
+    document.body.removeChild(this.child);
+    // this.parent.removeChild(this.child);
+    // let modal = document.getElementById("modal");
+    // console.log(modal);
+    // console.log(modal.parentNode);
+    // if(modal.parentNode.contains(modal))
+    //   modal.parentNode.removeChild(modal);
+    //
+    // console.log(document.body);
   }
 
+  shouldComponentUpdate() { return false }
+
   render() {
-    return <div
-      ref={ (el) => this.el = el }
+    return <div ref={ (parent) => this.parent = parent }>
+    <div
+      id="modal"
+      ref={ (child) => this.child = child }
       style={{
         borderWidth: 1,
         left: 0,
@@ -184,7 +198,7 @@ class Modal extends React.Component {
         top: 0,
         zIndex: 999
       }}
-    >{this.props.children}</div>;
+    >{this.props.children}</div></div>;
   }
 }
 

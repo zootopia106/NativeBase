@@ -4,6 +4,9 @@ var _lodash=require('lodash');var _lodash2=_interopRequireDefault(_lodash);
 var _platform=require('./../variables/platform');var _platform2=_interopRequireDefault(_platform);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=
 
 function(){var variables=arguments.length>0&&arguments[0]!==undefined?arguments[0]:_platform2.default;
+var platformStyle=variables.platformStyle;
+var platform=variables.platform;
+
 var itemTheme={
 '.floatingLabel':{
 'NativeBase.Input':{
@@ -96,7 +99,7 @@ borderColor:variables.inputSuccessBorderColor},
 '.error':{
 borderColor:variables.inputErrorBorderColor},
 
-borderWidth:variables.borderWidth*2,
+borderWidth:platform!=='web'?variables.borderWidth*2:variables.borderWidth,
 borderTopWidth:0,
 borderRightWidth:0,
 borderLeftWidth:0,
@@ -115,7 +118,7 @@ borderColor:variables.inputSuccessBorderColor},
 '.error':{
 borderColor:variables.inputErrorBorderColor},
 
-borderWidth:variables.borderWidth*2,
+borderWidth:platform!=='web'?variables.borderWidth*2:variables.borderWidth,
 borderColor:variables.inputBorderColor},
 
 '.rounded':{
@@ -131,7 +134,7 @@ borderColor:variables.inputSuccessBorderColor},
 '.error':{
 borderColor:variables.inputErrorBorderColor},
 
-borderWidth:variables.borderWidth*2,
+borderWidth:platform!=='web'?variables.borderWidth*2:variables.borderWidth,
 borderRadius:30,
 borderColor:variables.inputBorderColor},
 
@@ -151,7 +154,7 @@ borderColor:variables.inputSuccessBorderColor},
 borderColor:variables.inputSuccessBorderColor},
 
 '.underline':{
-borderWidth:variables.borderWidth*2,
+borderWidth:platform!=='web'?variables.borderWidth*2:variables.borderWidth,
 borderTopWidth:0,
 borderRightWidth:0,
 borderLeftWidth:0,
@@ -175,7 +178,7 @@ borderColor:variables.inputErrorBorderColor},
 borderColor:variables.inputErrorBorderColor},
 
 '.underline':{
-borderWidth:variables.borderWidth*2,
+borderWidth:platform!=='web'?variables.borderWidth*2:variables.borderWidth,
 borderTopWidth:0,
 borderRightWidth:0,
 borderLeftWidth:0,
@@ -192,7 +195,7 @@ color:'#384850'}},
 
 
 
-borderWidth:variables.borderWidth*2,
+borderWidth:platform!=='web'?variables.borderWidth*2:variables.borderWidth,
 borderTopWidth:0,
 borderRightWidth:0,
 borderLeftWidth:0,

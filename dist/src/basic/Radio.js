@@ -17,7 +17,7 @@ var platform=variables.platform;
 
 return(
 _react2.default.createElement(_reactNative.TouchableOpacity,_extends({ref:function ref(c){return _this2._root=c;}},this.props),
-_reactNative.Platform.OS==='ios'?
+platformStyle==='ios'?
 this.props.selected&&_react2.default.createElement(_Ionicons2.default,{
 style:{
 color:variables.brandPrimary,

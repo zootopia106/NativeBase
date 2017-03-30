@@ -14,10 +14,11 @@ Header=function(_Component){_inherits(Header,_Component);function Header(){_clas
 {var _this2=this;
 var variables=this.context.theme?this.context.theme['@@shoutem.theme/themeStyle'].variables:_platform2.default;
 var platformStyle=variables.platformStyle;
+var platform=variables.platform;
 
 return(
 _react2.default.createElement(_reactNative.View,null,
-_react2.default.createElement(_reactNative.StatusBar,{
+platform!=='web'&&_react2.default.createElement(_reactNative.StatusBar,{
 backgroundColor:this.props.androidStatusBarColor?this.props.androidStatusBarColor:variables.statusBarColor,
 barStyle:this.props.iosBarStyle?this.props.iosBarStyle:platformStyle==='material'?'light-content':variables.iosStatusbar}),
 _react2.default.createElement(_reactNative.View,_extends({ref:function ref(c){return _this2._root=c;}},this.props))));

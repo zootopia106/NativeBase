@@ -10,4 +10,4 @@ var pickerTheme={};
 
 return pickerTheme;
 };
-//# sourceMappingURL=Picker.ios.js.map
+//# sourceMappingURL=Picker.js.map

@@ -12,4 +12,4 @@ props.children);
 };
 
 module.exports=Button;
-//# sourceMappingURL=Button.ios.js.map
+//# sourceMappingURL=Button.js.map

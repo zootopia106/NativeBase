@@ -1,0 +1,21 @@
+{
+  "colors": ["brandPrimary", "brandInfo", "brandSuccess", "brandDanger", "brandWarning", "brandSidebar"],
+  "badge": ["badgeBg", "badgeColor", "badgePadding"],
+  "button": ["btnFontFamily", "btnDisabledBg", "btnDisabledClr", "btnTextSize", "btnTextSizeLarge", "btnTextSizeSmall", "borderRadiusLarge", "buttonPadding", "iconSizeLarge", "iconSizeSmall"],
+  "checkbox": ["CheckboxRadius", "CheckboxBorderWidth", "CheckboxPaddingLeft", "CheckboxPaddingBottom", "CheckboxIconSize", "CheckboxIconMarginTop", "CheckboxFontSize", "DefaultFontSize", "checkboxBgColor", "checkboxSize", "checkboxTickColor"],
+  "segment": ["segmentBackgroundColor", "segmentActiveBackgroundColor", "segmentTextColor", "segmentActiveTextColor", "segmentBorderColor", "segmentBorderColorMain"],
+  "card": ["cardDefaultBg", "cardBorderColor"],
+  "font": ["fontFamily", "fontSizeBase", "fontSizeH1", "fontSizeH2", "fontSizeH3"],
+  "footerTab": ["tabBarTextColor", "tabBarTextSize", "activeTab", "sTabBarActiveTextColor", "tabBarActiveTextColor", "tabActiveBgColor"],
+  "tab": ["tabDefaultBg", "topTabBarTextColor", "topTabBarActiveTextColor", "topTabActiveBgColor", "topTabBarBorderColor", "topTabBarActiveBorderColor"],
+  "header": ["toolbarBtnColor", "toolbarDefaultBg", "toolbarHeight", "toolbarIconSize", "toolbarSearchIconSize", "toolbarInputColor", "searchBarHeight", "toolbarInverseBg", "toolbarTextColor", "toolbarDefaultBorder", "iosStatusbar", "statusBarColor"],
+  "icon": ["iconFamily", "iconFontSize", "iconMargin", "iconHeaderSize"],
+  "input": ["inputFontSize", "inputBorderColor", "inputSuccessBorderColor", "inputErrorBorderColor", "inputColor", "inputColorPlaceholder", "inputGroupMarginBottom", "inputHeightBase", "inputPaddingLeft", "inputPaddingLeftIcon"],
+  "lineHeight": ["btnLineHeight", "lineHeightH1", "lineHeightH2", "lineHeightH3", "iconLineHeight", "lineHeight"],
+  "list": ["listBorderColor", "listDividerBg", "listItemHeight", "listBtnUnderlayColor", "listItemPadding", "listNoteColor", "listNoteSize"],
+  "progressBar": ["defaultProgressColor", "inverseProgressColor"],
+  "rsdio": ["radioBtnSize", "radioSelectedColorAndroid", "radioBtnLineHeight", "radioColor", "radioSelectedColor"],
+  "spinner": ["defaultSpinnerColor", "inverseSpinnerColor"],
+  "text": ["textColor", "inverseTextColor", "noteFontSize"],
+  "title": ["titleFontfamily", "titleFontSize", "subTitleFontSize", "subtitleColor", "titleFontColor"]
+}

@@ -43,6 +43,7 @@ class Radio extends Component {
 Radio.propTypes = {
   ...TouchableOpacity.propTypes,
   selected: React.PropTypes.bool,
+  color: React.PropTypes.string,
 };
 
 const StyledRadio = connectStyle('NativeBase.Radio', {}, mapPropsToStyleNames)(Radio);

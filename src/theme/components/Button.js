@@ -476,6 +476,7 @@ export default (variables = variable) => {
       borderRadius: variables.borderRadiusBase,
       borderColor: variables.btnPrimaryBg,
       borderWidth: null,
+      borderStyle: (platform==='web') ? 'solid' : undefined,
       height: 45,
       alignSelf: 'flex-start',
       flexDirection: 'row',

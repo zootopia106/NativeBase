@@ -31,7 +31,9 @@ class Button extends Component {
     return computeProps(this.props, defaultProps);
   }
   render() {
-        return (<TouchableOpacity
+    if (Platform.OS==='ios' || variables.androidRipple===false || Platform['Version'] <= 21) {
+      return (
+        <TouchableOpacity
           {...this.prepareRootProps()}
           ref={c => this._root = c}
           activeOpacity={(this.props.activeOpacity) ? this.props.activeOpacity : 0.5}
@@ -40,6 +42,30 @@ class Button extends Component {
         </TouchableOpacity>
       );
     }
+    if (Platform.OS==='web') {
+      return (
+        <TouchableOpacity
+          {...this.prepareRootProps()}
+          ref={c => this._root = c}
+          activeOpacity={(this.props.activeOpacity) ? this.props.activeOpacity : 0.5}
+        >
+          {this.props.children}
+        </TouchableOpacity>
+      );
+    }
+    else {
+      return(
+          <TouchableNativeFeedback ref={c => this._root = c}
+              onPress={this.props.onPress}
+              background={(this.props.androidRippleColor) ? TouchableNativeFeedback.Ripple(this.props.androidRippleColor) : TouchableNativeFeedback.Ripple(variables.androidRippleColor)}
+               {...this.prepareRootProps()}>
+              <View {...this.prepareRootProps()}>
+                  {this.props.children}
+              </View>
+          </TouchableNativeFeedback>
+      );
+    }
+  }
 }
 
 Button.propTypes = {

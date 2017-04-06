@@ -119,20 +119,20 @@ _react2.default.createElement(_Right.Right,null));
 
 }},{key:'render',value:function render()
 
+
 {var _this5=this;
+
+var el=this;
+
 return(
 _react2.default.createElement(_reactNative.View,{ref:function ref(c){return _this5._root=c;}},
 this.renderButton(),
-_react2.default.createElement(_reactNative.Modal,{
-animationType:'slide',
-transparent:false,
-visible:this.state.modalVisible,
-onRequestClose:function onRequestClose(){_this5._setModalVisible(false);}},
-
+this.state.modalVisible&&_react2.default.createElement(Modal,null,
 _react2.default.createElement(_Container.Container,null,
 this.renderHeader(),
 _react2.default.createElement(_Content.Content,null,
 _react2.default.createElement(_reactNative.ListView,{
+contentContainerStyle:{backgroundColor:'#fff'},
 dataSource:this.state.dataSource,
 renderRow:function renderRow(child){return(
 _react2.default.createElement(_ListItem.ListItem,{
@@ -160,8 +160,46 @@ _react2.default.createElement(_Radio.Radio,{selected:false}))));}}))))));
 
 
 
-}}]);return PickerNB;}(_react.Component);
+}}]);return PickerNB;}(_react.Component);var
 
+
+
+
+Modal=function(_React$Component){_inherits(Modal,_React$Component);function Modal(){_classCallCheck(this,Modal);return _possibleConstructorReturn(this,(Modal.__proto__||Object.getPrototypeOf(Modal)).apply(this,arguments));}_createClass(Modal,[{key:'componentDidMount',value:function componentDidMount()
+
+{
+document.body.appendChild(this.child);
+}},{key:'componentWillUnmount',value:function componentWillUnmount()
+{
+
+document.body.removeChild(this.child);
+
+
+
+
+
+
+
+
+}},{key:'shouldComponentUpdate',value:function shouldComponentUpdate()
+
+{return false;}},{key:'render',value:function render()
+
+{var _this7=this;
+return _react2.default.createElement('div',{ref:function ref(parent){return _this7.parent=parent;}},
+_react2.default.createElement('div',{
+id:'modal',
+ref:function ref(child){return _this7.child=child;},
+style:{
+borderWidth:1,
+left:0,
+right:0,
+bottom:0,
+top:0,
+zIndex:999}},
+
+this.props.children));
+}}]);return Modal;}(_react2.default.Component);
 
 
 PickerNB.Item=_react2.default.createClass({displayName:'Item',
@@ -181,4 +219,4 @@ var StyledPickerNB=(0,_theme.connectStyle)('NativeBase.PickerNB',{},_mapPropsToS
 
 
 PickerNB=StyledPickerNB;
-//# sourceMappingURL=Picker.ios.js.map
+//# sourceMappingURL=Picker.web.js.map

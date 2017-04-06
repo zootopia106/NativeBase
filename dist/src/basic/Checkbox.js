@@ -39,7 +39,7 @@ _react2.default.createElement(_Ionicons2.default,{style:{
 color:variables.checkboxTickColor,
 fontSize:variables.CheckboxFontSize,
 lineHeight:variables.CheckboxIconSize},
-name:platform==='ios'&&platformStyle!=='material'?'ios-checkmark-outline':'md-checkmark'})));
+name:platformStyle==='ios'&&platformStyle!=='material'?'ios-checkmark-outline':'md-checkmark'})));
 
 
 }}]);return CheckBox;}(_react.Component);CheckBox.contextTypes={theme:_react2.default.PropTypes.object};

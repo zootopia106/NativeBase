@@ -4,6 +4,7 @@ var _reactNative=require('react-native');
 var _theme=require('@shoutem/theme');
 
 var _IconNB=require('../IconNB');
+
 var _NBIcons=require('./NBIcons.json');var _NBIcons2=_interopRequireDefault(_NBIcons);
 var _platform=require('./../../theme/variables/platform');var _platform2=_interopRequireDefault(_platform);
 var _lodash=require('lodash');var _lodash2=_interopRequireDefault(_lodash);
@@ -26,7 +27,7 @@ return this.props.name;
 }else
 if(typeof _NBIcons2.default[this.props.name]==='object'){
 var name=void 0;
-if(platform==='ios'&&platformStyle!=='material'){
+if(platformStyle==='ios'&&platformStyle!=='material'){
 name=this.props.active?_NBIcons2.default[this.props.name].ios.active:_NBIcons2.default[this.props.name].ios.default;
 }else{
 name=this.props.active?_NBIcons2.default[this.props.name].android.active:_NBIcons2.default[this.props.name].android.default;
@@ -40,7 +41,7 @@ return this.props.name;
 }},{key:'getIconName',value:function getIconName()
 
 {
-if(_reactNative.Platform.OS==='ios'){
+if(platformStyle==='ios'){
 if(this.props.ios){
 return this.props.ios;
 }else{

@@ -4,6 +4,9 @@ import _ from 'lodash';
 import variable from './../variables/platform';
 
 export default (variables = variable) => {
+  const platformStyle = variables.platformStyle;
+  const platform = variables.platform;
+  
   const itemTheme = {
       '.floatingLabel': {
         'NativeBase.Input': {
@@ -96,7 +99,7 @@ export default (variables = variable) => {
         '.error': {
           borderColor: variables.inputErrorBorderColor,
         },
-        borderWidth: variables.borderWidth * 2,
+        borderWidth: (platform !== 'web') ? variables.borderWidth * 2 : variables.borderWidth,
         borderTopWidth: 0,
         borderRightWidth: 0,
         borderLeftWidth: 0,
@@ -115,7 +118,7 @@ export default (variables = variable) => {
         '.error': {
           borderColor: variables.inputErrorBorderColor,
         },
-        borderWidth: variables.borderWidth * 2,
+        borderWidth: (platform !== 'web') ? variables.borderWidth * 2 : variables.borderWidth,
         borderColor: variables.inputBorderColor,
       },
       '.rounded': {
@@ -131,7 +134,7 @@ export default (variables = variable) => {
         '.error': {
           borderColor: variables.inputErrorBorderColor,
         },
-        borderWidth: variables.borderWidth * 2,
+        borderWidth: (platform !== 'web') ? variables.borderWidth * 2 : variables.borderWidth,
         borderRadius: 30,
         borderColor: variables.inputBorderColor,
       },
@@ -151,7 +154,7 @@ export default (variables = variable) => {
           borderColor: variables.inputSuccessBorderColor,
         },
         '.underline': {
-          borderWidth: variables.borderWidth * 2,
+          borderWidth: (platform !== 'web') ? variables.borderWidth * 2 : variables.borderWidth,
           borderTopWidth: 0,
           borderRightWidth: 0,
           borderLeftWidth: 0,
@@ -175,7 +178,7 @@ export default (variables = variable) => {
           borderColor: variables.inputErrorBorderColor,
         },
         '.underline': {
-          borderWidth: variables.borderWidth * 2,
+          borderWidth: (platform !== 'web') ? variables.borderWidth * 2 : variables.borderWidth,
           borderTopWidth: 0,
           borderRightWidth: 0,
           borderLeftWidth: 0,
@@ -192,7 +195,7 @@ export default (variables = variable) => {
         },
       },
 
-      borderWidth: variables.borderWidth * 2,
+      borderWidth: (platform !== 'web') ? variables.borderWidth * 2 : variables.borderWidth,
       borderTopWidth: 0,
       borderRightWidth: 0,
       borderLeftWidth: 0,

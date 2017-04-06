@@ -4,6 +4,7 @@ import { Platform } from 'react-native';
 import { connectStyle } from '@shoutem/theme';
 
 import { IconNB } from '../IconNB';
+// import { Icon } from '../Icon.web';
 import ic from './NBIcons.json';
 import variable from './../../theme/variables/platform';
 import _ from 'lodash';
@@ -19,14 +20,14 @@ class Icon extends Component {
     const variables = (this.context.theme) ? this.context.theme['@@shoutem.theme/themeStyle'].variables : variable;
     const platformStyle = variables.platformStyle;
     const platform = variables.platform;
-    
+
     if (variables.iconFamily==='Ionicons') {
       if (typeof ic[this.props.name]!=='object' ) {
         return this.props.name;
       }
       else if (typeof ic[this.props.name]==='object') {
         let name;
-        if ((platform === 'ios') && (platformStyle !== 'material') ) {
+        if ((platformStyle === 'ios') && (platformStyle !== 'material') ) {
           name = (this.props.active) ? ic[this.props.name].ios.active : ic[this.props.name].ios.default;
         } else {
           name = (this.props.active) ? ic[this.props.name].android.active : ic[this.props.name].android.default;
@@ -40,7 +41,7 @@ class Icon extends Component {
   }
 
   getIconName() {
-    if (Platform.OS === 'ios') {
+    if (platformStyle === 'ios') {
       if (this.props.ios) {
         return this.props.ios;
       } else {
@@ -56,20 +57,20 @@ class Icon extends Component {
   }
 
   render() {
-    if (this.props.ios && this.props.android) {
-      return (
-        <IconNB ref={c => this._root = c} {...this.props} name={(Platform.OS === 'ios') ? this.props.ios : this.props.android} />
-      );
-    } else if (this.props.name && (this.props.android || this.props.ios)) {
-      return (
-        <IconNB ref={c => this._root = c} {...this.props} name={this.getIconName()} />
-      );
-    } else {
-      return (
-        <IconNB ref={c => this._root = c} {...this.props} name={this.getName()} />
-      );
+      if (this.props.ios && this.props.android) {
+        return (
+          <IconNB ref={c => this._root = c} {...this.props} name={(Platform.OS === 'ios') ? this.props.ios : this.props.android} />
+        );
+      } else if (this.props.name && (this.props.android || this.props.ios)) {
+        return (
+          <IconNB ref={c => this._root = c} {...this.props} name={this.getIconName()} />
+        );
+      } else {
+        return (
+          <IconNB ref={c => this._root = c} {...this.props} name={this.getName()} />
+        );
+      }
     }
-  }
 }
 
 Icon.propTypes = {

@@ -1,7 +1,7 @@
 /* @flow */
 
 import React, { Component } from 'react';
-import { Picker, Modal, View, ListView } from 'react-native';
+import { Picker, View, ListView } from 'react-native';
 import _ from 'lodash';
 import { Text } from './Text';
 import { List } from './List';
@@ -119,20 +119,20 @@ class PickerNB extends Component {
     </Header>);
   }
 
+
   render() {
+
+    var el = this;
+
     return (
       <View ref={c => this._root = c}>
         {this.renderButton()}
-        <Modal
-          animationType="slide"
-          transparent={false}
-          visible={this.state.modalVisible}
-          onRequestClose={() => { this._setModalVisible(false); }}
-        >
+        {(this.state.modalVisible) && <Modal>
           <Container>
             {this.renderHeader()}
             <Content>
               <ListView
+                contentContainerStyle={{backgroundColor: '#fff'}}
                 dataSource={this.state.dataSource}
                 renderRow={child =>
                   <ListItem
@@ -157,11 +157,49 @@ class PickerNB extends Component {
               />
             </Content>
           </Container>
-        </Modal>
+        </Modal>}
       </View>
     );
   }
 
+}
+
+
+class Modal extends React.Component {
+
+  componentDidMount() {
+    document.body.appendChild(this.child);
+  }
+  componentWillUnmount() {
+    // this.parent.appendChild(this.child);
+    document.body.removeChild(this.child);
+    // this.parent.removeChild(this.child);
+    // let modal = document.getElementById("modal");
+    // console.log(modal);
+    // console.log(modal.parentNode);
+    // if(modal.parentNode.contains(modal))
+    //   modal.parentNode.removeChild(modal);
+    //
+    // console.log(document.body);
+  }
+
+  shouldComponentUpdate() { return false }
+
+  render() {
+    return <div ref={ (parent) => this.parent = parent }>
+    <div
+      id="modal"
+      ref={ (child) => this.child = child }
+      style={{
+        borderWidth: 1,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        top: 0,
+        zIndex: 999
+      }}
+    >{this.props.children}</div></div>;
+  }
 }
 
 PickerNB.Item = React.createClass({

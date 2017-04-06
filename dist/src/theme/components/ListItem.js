@@ -93,7 +93,7 @@ color:platform==='ios'?undefined:variables.listNoteColor}},
 
 
 '.itemDivider':{
-borderBottomWidth:null,
+borderBottomWidth:platform==='web'?1:null,
 marginLeft:null,
 padding:variables.listItemPadding,
 paddingLeft:variables.listItemPadding+5,
@@ -245,7 +245,7 @@ paddingVertical:variables.listItemPadding,
 borderBottomWidth:variables.borderWidth,
 borderColor:variables.listBorderColor},
 
-borderBottomWidth:null,
+borderBottomWidth:platform==='web'?0:null,
 paddingVertical:null,
 paddingRight:null},
 
@@ -340,7 +340,7 @@ fontSize:17},
 flex:1,
 height:44,
 justifyContent:'center',
-borderBottomWidth:1/_reactNative.PixelRatio.getPixelSizeForLayoutSize(1),
+borderBottomWidth:platform==='web'?1:1/_reactNative.PixelRatio.getPixelSizeForLayoutSize(1),
 borderColor:variables.listBorderColor},
 
 'NativeBase.Right':{
@@ -376,7 +376,7 @@ flex:0,
 alignSelf:'stretch',
 height:44,
 justifyContent:'flex-end',
-borderBottomWidth:1/_reactNative.PixelRatio.getPixelSizeForLayoutSize(1),
+borderBottomWidth:platform==='web'?1:1/_reactNative.PixelRatio.getPixelSizeForLayoutSize(1),
 borderColor:variables.listBorderColor,
 paddingRight:variables.listItemPadding+5},
 
@@ -394,7 +394,7 @@ flexDirection:'row',
 paddingRight:variables.listItemPadding+5,
 paddingVertical:variables.listItemPadding+3,
 marginLeft:variables.listItemPadding+5,
-borderBottomWidth:1/_reactNative.PixelRatio.getPixelSizeForLayoutSize(1),
+borderBottomWidth:platform==='web'?1:1/_reactNative.PixelRatio.getPixelSizeForLayoutSize(1),
 backgroundColor:variables.listBg,
 borderColor:variables.listBorderColor};
 

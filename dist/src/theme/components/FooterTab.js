@@ -39,7 +39,7 @@ justifyContent:'center',
 'NativeBase.Badge':{
 'NativeBase.Text':{
 fontSize:11,
-fontWeight:platform==='ios'?'600':undefined,
+fontWeight:platformStyle==='ios'?'600':undefined,
 lineHeight:14},
 
 top:-3,

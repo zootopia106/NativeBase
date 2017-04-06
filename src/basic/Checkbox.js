@@ -36,10 +36,10 @@ class CheckBox extends Component {
     return (
       <TouchableOpacity ref={c => this._root = c} {...this.prepareRootProps()}>
         <IconNB style={{
-            color: variables.checkboxTickColor,
-            fontSize: variables.CheckboxFontSize,
-            lineHeight: variables.CheckboxIconSize
-          }} name={((platform === 'ios') && (platformStyle !== 'material')) ? 'ios-checkmark-outline' : 'md-checkmark'} />
+          color: variables.checkboxTickColor,
+          fontSize: variables.CheckboxFontSize,
+          lineHeight: variables.CheckboxIconSize
+        }} name={((platformStyle === 'ios') && (platformStyle !== 'material')) ? 'ios-checkmark-outline' : 'md-checkmark'} />
       </TouchableOpacity>
     );
   }

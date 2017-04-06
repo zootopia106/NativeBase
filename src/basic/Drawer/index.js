@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import RNDrawer from 'react-native-drawer';
 
 export default class Drawer extends Component {
-  constructor(props) {
-    super(props);
 
-  }
   render() {
     return (
       <RNDrawer ref={c => this._root = c} {...this.props}/>
@@ -18,7 +15,7 @@ Drawer.defaultProps = {
   tapToClose: true,
   openDrawerOffset: 0.2,
   panCloseMask: 0.2,
-  closedDrawerOffset: -3,
+  closedDrawerOffset: 0,
   styles: {
     drawer: {
       shadowColor: '#000000',

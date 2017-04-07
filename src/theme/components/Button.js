@@ -133,6 +133,7 @@ export default (variables = variable) => {
         shadowOpacity: null,
         shadowRadius: null,
         backgroundColor: 'transparent',
+        borderStyle: (platform==='web') ? 'solid' : undefined,
       },
 
       '.dark': {
@@ -476,7 +477,6 @@ export default (variables = variable) => {
       borderRadius: variables.borderRadiusBase,
       borderColor: variables.btnPrimaryBg,
       borderWidth: null,
-      borderStyle: (platform==='web') ? 'solid' : undefined,
       height: 45,
       alignSelf: 'flex-start',
       flexDirection: 'row',

@@ -132,7 +132,8 @@ shadowColor:null,
 shadowOffset:null,
 shadowOpacity:null,
 shadowRadius:null,
-backgroundColor:'transparent'},
+backgroundColor:'transparent',
+borderStyle:platform==='web'?'solid':undefined},
 
 
 '.dark':{
@@ -476,7 +477,6 @@ backgroundColor:variables.btnPrimaryBg,
 borderRadius:variables.borderRadiusBase,
 borderColor:variables.btnPrimaryBg,
 borderWidth:null,
-borderStyle:platform==='web'?'solid':undefined,
 height:45,
 alignSelf:'flex-start',
 flexDirection:'row',

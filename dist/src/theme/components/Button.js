@@ -476,7 +476,7 @@ paddingHorizontal:variables.buttonPadding+10,
 backgroundColor:variables.btnPrimaryBg,
 borderRadius:variables.borderRadiusBase,
 borderColor:variables.btnPrimaryBg,
-borderWidth:0,
+borderWidth:null,
 height:45,
 alignSelf:'flex-start',
 flexDirection:'row',
@@ -486,7 +486,8 @@ shadowOffset:platformStyle==='material'?{width:0,height:2}:undefined,
 shadowOpacity:platformStyle==='material'?0.2:undefined,
 shadowRadius:platformStyle==='material'?1.2:undefined,
 alignItems:'center',
-justifyContent:'space-between'};
+justifyContent:'space-between',
+borderStyle:platform==='web'?'none':undefined};
 
 return buttonTheme;
 };

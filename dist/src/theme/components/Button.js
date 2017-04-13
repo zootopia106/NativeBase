@@ -486,8 +486,7 @@ shadowOffset:platformStyle==='material'?{width:0,height:2}:undefined,
 shadowOpacity:platformStyle==='material'?0.2:undefined,
 shadowRadius:platformStyle==='material'?1.2:undefined,
 alignItems:'center',
-justifyContent:'space-between',
-borderStyle:platform==='web'?'none':undefined};
+justifyContent:'space-between'};
 
 return buttonTheme;
 };

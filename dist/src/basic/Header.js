@@ -31,7 +31,8 @@ Header.propTypes=_extends({},
 _reactNative.View.propTypes,{
 style:_react2.default.PropTypes.object,
 searchBar:_react2.default.PropTypes.bool,
-rounded:_react2.default.PropTypes.bool});
+rounded:_react2.default.PropTypes.bool,
+hasTabs:_react2.default.PropTypes.bool});
 
 
 var StyledHeader=(0,_theme.connectStyle)('NativeBase.Header',{},_mapPropsToStyleNames2.default)(Header);exports.

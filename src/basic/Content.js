@@ -41,7 +41,7 @@ class Content extends Component {
 
 Content.propTypes = {
   ...KeyboardAwareScrollView.propTypes,
-  style: React.PropTypes.object,,
+  style: React.PropTypes.object,
   contentContainerStyle: React.PropTypes.object,
   padder: React.PropTypes.bool,
   disableKBDismissScroll: React.PropTypes.bool,

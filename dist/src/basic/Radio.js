@@ -42,7 +42,8 @@ name:this.props.selected?'md-radio-button-on':'md-radio-button-off'})));
 
 Radio.propTypes=_extends({},
 _reactNative.TouchableOpacity.propTypes,{
-selected:_react2.default.PropTypes.bool});
+selected:_react2.default.PropTypes.bool,
+color:_react2.default.PropTypes.string});
 
 
 var StyledRadio=(0,_theme.connectStyle)('NativeBase.Radio',{},_mapPropsToStyleNames2.default)(Radio);exports.

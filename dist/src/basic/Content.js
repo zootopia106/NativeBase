@@ -42,6 +42,7 @@ this.props.children));
 Content.propTypes=_extends({},
 _reactNativeKeyboardAwareScrollView.KeyboardAwareScrollView.propTypes,{
 style:_react2.default.PropTypes.object,
+contentContainerStyle:_react2.default.PropTypes.object,
 padder:_react2.default.PropTypes.bool,
 disableKBDismissScroll:_react2.default.PropTypes.bool,
 enableResetScrollToCoords:_react2.default.PropTypes.bool});

@@ -1,4 +1,8 @@
 var printMessage=require('print-message');
+var fs=require('fs-extra');
+
+fs.copySync(__dirname+'/Fonts',__dirname+'/dist/Fonts');
+fs.copySync(__dirname+'/src/Fonts.css',__dirname+'/dist/src/Fonts.css');
 
 printMessage([
 'NativeBase 2.0 has been succesfully installed!',

@@ -17,6 +17,7 @@
     "compile": "rm -rf dist/* && babel . --out-dir dist --ignore node_modules,dist --source-maps",
     "transpile": "npm run compile && cp src/basic/Icon/NBIcons.json dist/src/basic/Icon",
     "test": "jest",
+    "flow": "flow",
     "prepublish": "npm run transpile",
     "postinstall": "node addEjectScript.js"
   },
@@ -32,7 +33,7 @@
   "private": false,
   "dependencies": {
     "@shoutem/animation": "^0.8.9",
-    "@shoutem/theme": "https://github.com/GeekyAnts/theme#transpiled",
+    "@shoutem/theme": "https://github.com/GeekyAnts/theme",
     "blueimp-md5": "^2.5.0",
     "clamp": "^1.0.1",
     "color": "~0.11.1",
@@ -49,9 +50,10 @@
     "tween-functions": "^1.0.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
+    "babel-cli": "^6.24.0",
     "babel-eslint": "^6.1.2",
     "babel-jest": "^16.0.0",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native": "^1.9.0",
     "eslint": "^3.5.0",
     "eslint-config-airbnb": "^11.1.0",
@@ -59,6 +61,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.1",
     "eslint-plugin-react": "^6.2.0",
     "eslint-plugin-react-native": "^2.0.0",
+    "flow-bin": "^0.43.0",
     "jest": "17.0.0",
     "react": "^15.4.2",
     "react-native": "^0.39.2",

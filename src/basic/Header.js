@@ -32,6 +32,7 @@ Header.propTypes = {
   style: React.PropTypes.object,
   searchBar: React.PropTypes.bool,
   rounded: React.PropTypes.bool,
+  hasTabs: React.PropTypes.bool
 };
 
 const StyledHeader = connectStyle('NativeBase.Header', {}, mapPropsToStyleNames)(Header);

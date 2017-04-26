@@ -1,4 +1,4 @@
-Object.defineProperty(exports,"__esModule",{value:true});exports.mapPropsToStyleNames=exports.css=exports.Segment=exports.DefaultTabBar=exports.TabContainer=exports.TabHeading=exports.ScrollableTab=exports.View=exports.Text=exports.Gravatar=exports.Label=exports.Subtitle=exports.Item=exports.DeckSwiper=exports.Separator=exports.ListItem=exports.List=exports.Picker=exports.FooterTab=exports.Tabs=exports.Tab=exports.Footer=exports.Content=exports.Container=exports.Spinner=exports.H3=exports.H2=exports.H1=exports.CardItem=exports.Card=exports.Thumbnail=exports.Radio=exports.CheckBox=exports.Badge=exports.Body=exports.Right=exports.Left=exports.Title=exports.Input=exports.Form=exports.Header=exports.Icon=exports.Button=exports.Drawer=exports.connectStyle=exports.StyleProvider=exports.variables=exports.getTheme=undefined;var _theme=require('@shoutem/theme');
+Object.defineProperty(exports,"__esModule",{value:true});exports.mapPropsToStyleNames=exports.css=exports.Segment=exports.DefaultTabBar=exports.TabContainer=exports.TabHeading=exports.ScrollableTab=exports.View=exports.Text=exports.Gravatar=exports.Label=exports.Subtitle=exports.Item=exports.DeckSwiper=exports.Separator=exports.ListItem=exports.List=exports.Picker=exports.FooterTab=exports.Tabs=exports.Tab=exports.Footer=exports.Content=exports.Container=exports.Spinner=exports.H3=exports.H2=exports.H1=exports.CardItem=exports.Card=exports.Thumbnail=exports.Radio=exports.CheckBox=exports.Badge=exports.Body=exports.Right=exports.Left=exports.Title=exports.Input=exports.Form=exports.Header=exports.Icon=exports.Button=exports.Drawer=exports.connectStyle=exports.StyleProvider=exports.variables=exports.getTheme=undefined;var _nativeBaseShoutemTheme=require('native-base-shoutem-theme');
 var _lodash=require('lodash');
 
 var _Gravatar=require('./backward/Widgets/Gravatar');
@@ -65,8 +65,8 @@ var _Fonts=require('./Fonts.css');var _Fonts2=_interopRequireDefault(_Fonts);fun
 
 getTheme=_components2.default;exports.
 variables=_platform2.default;exports.
-StyleProvider=_theme.StyleProvider;exports.
-connectStyle=_theme.connectStyle;exports.
+StyleProvider=_nativeBaseShoutemTheme.StyleProvider;exports.
+connectStyle=_nativeBaseShoutemTheme.connectStyle;exports.
 Drawer=_Drawer2.default;exports.
 Button=_Button.Button;exports.
 

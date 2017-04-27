@@ -33,7 +33,7 @@
   "private": false,
   "dependencies": {
     "@shoutem/animation": "^0.8.9",
-    "native-base-shoutem-theme": "https://github.com/GeekyAnts/theme#transpiled",
+    "@shoutem/theme": "git+https://github.com/GeekyAnts/theme.git#8789996453ce0da8f93829f08ecf01f903c3f44d",
     "blueimp-md5": "^2.5.0",
     "clamp": "^1.0.1",
     "color": "~0.11.1",

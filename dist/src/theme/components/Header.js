@@ -192,11 +192,17 @@ alignSelf:null,
 paddingHorizontal:variables.buttonPadding},
 
 flex:platformStyle==='ios'&&platformStyle!=='material'?1:0.5,
+flexGrow:_reactNative.Platform.OS==='web'?1:undefined,
+flexShrink:_reactNative.Platform.OS==='web'?1:undefined,
+flexBasis:_reactNative.Platform.OS==='web'?0:undefined,
 alignSelf:'center',
 alignItems:'flex-start'},
 
 'NativeBase.Body':{
 flex:1,
+flexGrow:_reactNative.Platform.OS==='web'?1:undefined,
+flexShrink:_reactNative.Platform.OS==='web'?1:undefined,
+flexBasis:_reactNative.Platform.OS==='web'?0:undefined,
 alignItems:platformStyle==='ios'&&platformStyle!=='material'?'center':'flex-start',
 alignSelf:'center',
 'NativeBase.Segment':{
@@ -285,6 +291,9 @@ alignSelf:null,
 paddingHorizontal:variables.buttonPadding},
 
 flex:1,
+flexGrow:_reactNative.Platform.OS==='web'?1:undefined,
+flexShrink:_reactNative.Platform.OS==='web'?1:undefined,
+flexBasis:_reactNative.Platform.OS==='web'?0:undefined,
 alignSelf:'center',
 alignItems:'flex-end',
 flexDirection:'row',

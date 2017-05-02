@@ -169,7 +169,7 @@ fontWeight:platform==='ios'?'500':undefined},
 
 borderBottomWidth:platform==='ios'?variables.borderWidth:null},
 
-borderBottomWidth:null,
+borderBottomWidth:0,
 paddingVertical:variables.listItemPadding+5},
 
 '.footer':{

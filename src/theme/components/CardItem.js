@@ -169,7 +169,7 @@ export default (variables = variable) => {
           },
           borderBottomWidth: (platform === 'ios') ? variables.borderWidth : null,
         },
-        borderBottomWidth: null,
+        borderBottomWidth: 0,
         paddingVertical: variables.listItemPadding + 5,
       },
       '.footer': {

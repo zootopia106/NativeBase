@@ -30,6 +30,12 @@ lineHeight:platform==='web'?28:variables.lineHeight-1,
 textAlign:'center',
 paddingHorizontal:3},
 
+'NativeBase.Icon':{
+color:variables.badgeColor,
+fontSize:variables.fontSizeBase+4,
+lineHeight:platform==='web'?28:variables.lineHeight-1,
+paddingHorizontal:0},
+
 backgroundColor:variables.badgeBg,
 padding:variables.badgePadding,
 paddingHorizontal:6,

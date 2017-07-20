@@ -1,5 +1,5 @@
 # Source file
-Components
+components
 
 # Dotfiles
 .babelrc
@@ -9,6 +9,4 @@ Components
 _config.yml
 
 # Documents
-CONTRIBUTING.md
-ISSUE_TEMPLATE.txt
 img

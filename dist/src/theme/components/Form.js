@@ -73,6 +73,11 @@ left:-15},
 
 marginLeft:15},
 
+".error":{
+"NativeBase.Text":{
+left:13}},
+
+
 ".last":{
 marginLeft:0,
 paddingLeft:15},

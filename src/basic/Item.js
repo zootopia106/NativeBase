@@ -4,6 +4,7 @@ import { TouchableOpacity, Animated, Platform, View } from "react-native";
 import { Input } from "./Input";
 import { Label } from "./Label";
 import { Icon } from "./Icon";
+import { Text } from "./Text";
 
 import { connectStyle } from "native-base-shoutem-theme";
 import variables from "../theme/variables/platform";
@@ -135,6 +136,16 @@ class Item extends Component {
         return item;
       }
     });
+
+    let text = [];
+    let textProps = {};
+    text = _.remove(childrenArray, item => {
+      if (item.type === Text) {
+        textProps = item.props;
+        return item;
+      }
+    });
+
     if (this.props.floatingLabel && icon.length) {
       newChildren.push(<Icon key="i1" {...iconProps} />);
       newChildren.push(
@@ -234,6 +245,38 @@ class Item extends Component {
               {...inputProps}
               style={{ width: variables.deviceWidth - 40 }}
             />
+          </View>
+        </View>
+      );
+    } else if (this.props.error && this.props.error) {
+      newChildren.push(
+        <View key="e" style={{ flex: 1 }}>
+          <View
+            key="e1"
+            style={{
+              flexDirection: "row",
+              flex: 0.8
+            }}
+          >
+            <Input
+              key="e2"
+              {...inputProps}
+              style={{ width: variables.deviceWidth - 40 }}
+            />
+            <Icon key="e3" {...iconProps} />
+          </View>
+
+          <View key="e4" style={{ flex: 0.2 }}>
+            <Text
+              key="e5"
+              {...textProps}
+              style={{
+                fontSize: variables.inputFontSize - 5,
+                color: variables.brandDanger
+              }}
+            >
+              {this.props.errorMsg}
+            </Text>
           </View>
         </View>
       );

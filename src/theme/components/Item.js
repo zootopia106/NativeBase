@@ -189,6 +189,11 @@ export default (variables = variable) => {
         borderLeftWidth: 0,
         borderColor: variables.inputErrorBorderColor
       },
+      "NativeBase.Text": {
+        fontSize: variables.inputValidationTextFontSize,
+        color: variables.inputErrorBorderColor,
+        paddingLeft: 2
+      },
       borderColor: variables.inputErrorBorderColor
     },
     ".disabled": {

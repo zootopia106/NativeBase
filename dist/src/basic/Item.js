@@ -190,7 +190,7 @@ inputProps.value?
 _this3.setState({
 isFocused:true}):
 
-!_this3.state.text.length&&
+!inputProps.value.length&&
 _this3.setState({isFocused:false});
 inputProps.onBlur&&inputProps.onBlur();
 },
@@ -234,7 +234,7 @@ inputProps.value?
 _this3.setState({
 isFocused:true}):
 
-!_this3.state.text.length&&_this3.setState({isFocused:false});
+!inputProps.value.length&&_this3.setState({isFocused:false});
 inputProps.onBlur&&inputProps.onBlur();
 },
 onChangeText:function onChangeText(text){
